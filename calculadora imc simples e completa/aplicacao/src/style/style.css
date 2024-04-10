@@ -6,7 +6,7 @@
 
 body{
     background: rgb(34,193,195);
-    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(42,219,149,0.924829306722689) 
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(42,219,149,0.924829306722689) 
     44%, rgba(43,165,191,1) 73%, rgba(45,84,253,1) 100%);
     font-family: Arial, sans-serif;
 }
@@ -62,12 +62,10 @@ body{
     padding: 15px;
     background-color: rgb(255, 255, 255);
     width: 700px;
-    height: 350px;
+    height: 365px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
-
-
-
-
 
 .placeholder{
     position: relative;
@@ -76,7 +74,6 @@ body{
     border-radius: 15px;
 }
 
-.placeholder select,
 .placeholder input {
     width: 200%;
     height: 35px;
@@ -124,9 +121,70 @@ body{
     outline: none; /* Remove a borda de foco padrão */
 }
 
-.placeholder select:not(:valid) ~ p {
-    transform: translateY(-10px);
+
+
+
+
+
+
+
+
+label {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 15px;
 }
+  
+  label select{
+    width: 200%;
+    height: 35px;
+    padding: 10px;
+    border: solid 1px #D6D5D5;
+    border-radius: 10px;
+    font-size: 22px;
+  }
+  
+.label textarea{
+    width:  100%;
+    outline: none;
+    resize: none;
+    border-radius: 3px;
+    border: solid 1px #D6D5D5;
+}
+
+  label p {
+    position:absolute;
+    left: 8px;
+    top: 22px;
+    pointer-events: none;
+    transition: 0.2s;
+    color: #7F7F7F;
+    text-align: center;
+    background-color: #fff;
+    border: 0;
+    padding: 5px;
+    outline: 0;
+    font-weight: 550;
+  }
+  
+  label select:valid ~ p,
+  label select:focus ~ p {
+    transform: translateY(-35px);
+    font-size: 10px;
+    color: #7F7F7F;
+  }
+  
+  label select:not(:valid) ~ p {
+    transform: translateY(-10px);
+    font-size: 19px;
+    color: #7F7F7F;
+  }
+
+
+
+
+
 
 
 
@@ -134,13 +192,10 @@ body{
 .rodape{
     display: flex;
     justify-content: center;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 25px;
 }
 
 .botao{
-    width: 200px; /* Fazendo o botão ocupar metade do espaço com um pequeno espaço entre eles */
+    width: 710px; /* Fazendo o botão ocupar metade do espaço com um pequeno espaço entre eles */
     height:  30px;
     padding: 10px;
     background-color: rgba(8, 8, 193, 0.849);
@@ -151,7 +206,7 @@ body{
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    box-shadow: 1.6px 1px rgba(58, 58, 61, 0.39);
+    box-shadow: 1.6px 1px rgba(58, 58, 61, 0.401);
 }
 
 .botao:hover {
